@@ -7,3 +7,24 @@ VM -> Infrastructure -> hypervisor ->
    -> Bins/Libs -> APP1
 
 CONTAINER -> Infrastructure -> Operating System -> Docker Engin -> Bins/Libs -> APP1
+
+Dockerfile build -> DockerImage -> push -> Repository
+
+必要な時に Pull をして使うだけ。
+
+docker の概念を簡単に
+- Image
+
+ Image はプログラムだと考えると望ましい。image layer が集合体として、Image を作ることも可能。Read-only で Immutable
+
+- Container
+
+ Container はProcess だと思うと望ましい。Write 可能で揮発性でメモリに常駐する。
+- Dockerfile
+
+ Instruction set で docker image を作る説明書だと考えればよい
+
+- Registry
+
+ Github のような Image ストレージであり、代表的な Public registry として、DockerHub がある。
+
